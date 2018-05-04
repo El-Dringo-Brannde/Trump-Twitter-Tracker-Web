@@ -8,9 +8,11 @@ class App extends Component {
    render() {
       return (
          <div >
-            <HeatMap></HeatMap>
-            <SunBurst></SunBurst>
             <WordCloud></WordCloud>
+            <SunBurst></SunBurst>
+            <HeatMap></HeatMap>
+
+
          </div>
       );
    }

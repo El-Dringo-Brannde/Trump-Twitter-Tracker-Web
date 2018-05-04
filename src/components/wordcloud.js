@@ -11,8 +11,22 @@ export default class WordCloud extends React.Component {
    constructor() {
       super()
    }
-   
-   componentDidMount() {
+
+   async componentDidMount() {
+      let { data } = await axios.get('http://localhost:3005/words/all')
+      Highcharts.chart('wordcloud', {
+         chart: {
+            backgroundColor: '#03A9F4'
+         },
+         series: [{
+            type: 'wordcloud',
+            data: data,
+            name: 'Occurrences'
+         }],
+         title: {
+            text: 'Most Common Words Trump Tweets'
+         }
+      });
    }
 
    render() {
@@ -21,9 +35,8 @@ export default class WordCloud extends React.Component {
             top='left'
             bgColor="#03A9F4"
             noMargin
-            className='about-me'
             style={{ width: '100%' }}>
-            <div id='wordcloud' style={{ height: 800 }}></div>
+            <div id='wordcloud' style={{ marginBottom: 100 }}></div>
 
          </SkewedContainer >
       )

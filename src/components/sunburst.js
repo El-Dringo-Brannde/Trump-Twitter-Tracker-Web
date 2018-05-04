@@ -11,10 +11,14 @@ export default class SunBurst extends React.Component {
       let { data } = await Axios.get('http://localhost:3005/words/types')
       Highcharts.chart('sunburst', {
          chart: {
-            height: '100%'
+            height: '100%',
+            backgroundColor: '#9C27B0'
          },
          title: {
-            text: 'Popular Trump Tweet Words In The Last 365 Days'
+            text: 'Popular Trump Tweet Words In The Last 365 Days',
+            style: {
+               color: '#FFFFFF'
+            }
          },
          series: [{
             type: "sunburst",
@@ -63,7 +67,7 @@ export default class SunBurst extends React.Component {
             bgColor="#9C27B0"
             noMargin
             style={{ width: '100%' }}>
-            <div id='sunburst' ></div>
+            <div id='sunburst' style={{ marginBottom: 100 }} ></div>
          </SkewedContainer>
       )
    }
