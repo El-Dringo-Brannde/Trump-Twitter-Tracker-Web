@@ -1,6 +1,8 @@
 import React from 'react'
 import SkewedContainer from "sc-react";
 
+import URL from './../config/server'
+
 import Highcharts from 'highcharts';
 import sunburst from 'highcharts/modules/sunburst';
 import Axios from 'axios';
@@ -8,7 +10,7 @@ sunburst(Highcharts);
 
 export default class SunBurst extends React.Component {
    async componentDidMount() {
-      let { data } = await Axios.get('http://localhost:3005/words/types')
+      let { data } = await Axios.get(`${URL}/words/types`)
       Highcharts.chart('sunburst', {
          chart: {
             height: '100%',
