@@ -62,8 +62,8 @@ export default class HeatMap extends React.Component {
 
          tooltip: {
             formatter: function() {
-               return '<b>' + this.series.xAxis.categories[this.point.x] + '</b> sold <br><b>' +
-                  this.point.value + '</b> items on <br><b>' + this.series.yAxis.categories[this.point.y] + '</b>';
+               return '<b>' + this.series.xAxis.categories[this.point.x] + '</b> totaled <br><b>' +
+                  this.point.value + '</b> tweets <br><b>' + this.series.yAxis.categories[this.point.y] + '</b>';
             }
          },
 
