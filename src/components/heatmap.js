@@ -2,15 +2,17 @@ import React from 'react'
 import SkewedContainer from "sc-react";
 import * as axios from 'axios';
 
+import URL from './../config/server';
+
 import Highcharts from 'highcharts'
 import heatmap from 'highcharts/modules/heatmap'
+
 heatmap(Highcharts)
 
 export default class HeatMap extends React.Component {
    async componentDidMount() {
 
-      let { data } = await axios.get('http://localhost:3005/words/times')
-      console.log(data)
+      let { data } = await axios.get(`${URL}/words/times`)
       Highcharts.chart('heatmap', {
          chart: {
             type: 'heatmap',

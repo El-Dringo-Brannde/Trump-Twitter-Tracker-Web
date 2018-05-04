@@ -2,6 +2,8 @@ import React from 'react'
 import SkewedContainer from "sc-react";
 import * as axios from 'axios';
 
+import URL from './../config/server'
+
 import Highcharts from 'highcharts';
 import wordcloud from 'highcharts/modules/wordcloud';
 wordcloud(Highcharts);
@@ -13,7 +15,7 @@ export default class WordCloud extends React.Component {
    }
 
    async componentDidMount() {
-      let { data } = await axios.get('http://localhost:3005/words/all')
+      let { data } = await axios.get(`${URL}/words/all`)
       Highcharts.chart('wordcloud', {
          chart: {
             backgroundColor: '#03A9F4'
