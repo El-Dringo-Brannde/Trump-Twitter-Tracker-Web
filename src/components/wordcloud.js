@@ -4,44 +4,41 @@ import * as axios from 'axios';
 
 import URL from './../config/server'
 
-import Highcharts from 'highcharts';
-import wordcloud from 'highcharts/modules/wordcloud';
-wordcloud(Highcharts);
+// import Highcharts from 'highcharts';
+// import wordcloud from 'highcharts/modules/wordcloud';
+// wordcloud(Highcharts);
 
 
-export default class WordCloud extends React.Component {
-   constructor() {
-      super()
-   }
+// async componentDidMount() {
+//    let { dispatch } = this.props
+//    let { data } = await axios.get(`${URL}/words/all`)
+//    dispatch(fetchData({ type: FETCH_DATA_START }))
+//    Highcharts.chart('wordcloud', {
+//       chart: {
+//          backgroundColor: '#03A9F4'
+//       },
+//       series: [{
+//          type: 'wordcloud',
+//          data: data,
+//          name: 'Occurrences'
+//       }],
+//       title: {
+//          text: 'Most Common Words Trump Tweets'
+//       }
+//    });
+// }
 
-   async componentDidMount() {
-      let { data } = await axios.get(`${URL}/words/all`)
-      Highcharts.chart('wordcloud', {
-         chart: {
-            backgroundColor: '#03A9F4'
-         },
-         series: [{
-            type: 'wordcloud',
-            data: data,
-            name: 'Occurrences'
-         }],
-         title: {
-            text: 'Most Common Words Trump Tweets'
-         }
-      });
-   }
-
-   render() {
-      return (
-         <SkewedContainer
-            top='left'
-            bgColor="#03A9F4"
-            noMargin
-            style={{ width: '100%' }}>
-            <div id='wordcloud' style={{ marginBottom: 100 }}></div>
-
-         </SkewedContainer >
-      )
-   }
+const WordCloud = (...props) => {
+   // console.log(...props)
+   return (
+      <SkewedContainer
+         top='left'
+         bgColor="#03A9F4"
+         noMargin
+         style={{ width: '100%' }}>
+         <div id='wordcloud' style={{ marginBottom: 100 }}></div>
+      </SkewedContainer >
+   )
 }
 
+export default WordCloud
