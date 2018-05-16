@@ -2,17 +2,15 @@ import * as axios from "axios";
 import URL from "./../../config/server";
 
 import {
-   WORDCLOUD_FETCH_START,
-   WORDCLOUD_FETCH_SUCCESS,
-   WORDCLOUD_FETCH_ERROR
+   HEATMAP_FETCH_START,
+   HEATMAP_FETCH_SUCCESS,
+   HEATMAP_FETCH_ERROR
 } from './actionTypes'
-
-import Axios from "axios";
 
 export function requestData() {
    return {
-      type: WORDCLOUD_FETCH_START,
-      wordCloud: {
+      type: HEATMAP_FETCH_START,
+      heatMap: {
          data: [],
          isFetching: true
       }
@@ -21,19 +19,18 @@ export function requestData() {
 
 export function receiveData(json) {
    return {
-      type: WORDCLOUD_FETCH_SUCCESS,
-      wordCloud: {
+      type: HEATMAP_FETCH_SUCCESS,
+      heatMap: {
          isFetching: false,
          data: json
-      },
-
+      }
    }
 }
 
 export function errorData(graph, errMsg) {
    return {
-      type: WORDCLOUD_FETCH_ERROR,
-      wordCloud: {
+      type: HEATMAP_FETCH_ERROR,
+      heatMap: {
          isFetching: false,
          data: []
       }

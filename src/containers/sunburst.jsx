@@ -1,18 +1,14 @@
 import React from 'react'
 import SkewedContainer from "sc-react";
-import * as axios from 'axios';
-
-import URL from './../config/server'
 import PropTypes from 'prop-types'
 
 import { connect } from 'react-redux'
-import { fetchData } from './../redux/wordcloud/actions';
+import { fetchData } from './../redux/sunburst/actions';
+
+import SunBurst from "./../components/graphs/sunburst";
 
 
-import WordCloud from "./../components/graphs/wordcloud";
-
-
-class WordCloudContainer extends React.Component {
+class SunBurstContainer extends React.Component {
    static propTypes = {
       data: PropTypes.array.isRequired,
       isFetching: PropTypes.bool.isRequired
@@ -24,12 +20,12 @@ class WordCloudContainer extends React.Component {
 
    componentDidMount() {
       const { dispatch } = this.props
-      dispatch(fetchData('wordCloud', 'all'))
+      dispatch(fetchData('sunBurst', 'types'))
    }
 
    render() {
       return (
-         <WordCloud {...this.props} />
+         <SunBurst {...this.props} />
       )
    }
 }
@@ -39,7 +35,7 @@ function mapStateToProps(state) {
    const {
       data,
       isFetching
-   } = state.wordCloud || {
+   } = state.sunBurst || {
       isFetching: true,
       data: []
    }
@@ -49,4 +45,4 @@ function mapStateToProps(state) {
    }
 }
 
-export default connect(mapStateToProps)(WordCloudContainer)
+export default connect(mapStateToProps)(SunBurstContainer)

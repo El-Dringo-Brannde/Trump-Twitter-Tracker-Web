@@ -22,7 +22,11 @@ export default function wordCloud(state = initialState, action) {
             data: action.wordCloud.data
          }
       case WORDCLOUD_FETCH_ERROR:
-         return state
+         return {
+            ...state,
+            isFetching: false,
+            data: []
+         }
       default:
          return { ...state }
    }

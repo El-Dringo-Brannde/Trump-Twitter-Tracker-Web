@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-// import HeatMap from "./components/heatmap";
-// import SunBurst from './components/sunburst'
+import HeatMapContainer from "./containers/heatmap";
+import SunBurstContainer from './containers/sunburst'
 import WordCloudContainer from './containers/wordcloud'
 
 class App extends Component {
@@ -9,8 +9,8 @@ class App extends Component {
       return (
          <div >
             <WordCloudContainer />
-            {/* <SunBurst></SunBurst>
-            <HeatMap></HeatMap> */}
+            <SunBurstContainer />
+            <HeatMapContainer />
          </div>
       );
    }

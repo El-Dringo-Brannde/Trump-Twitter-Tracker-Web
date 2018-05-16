@@ -2,17 +2,17 @@ import * as axios from "axios";
 import URL from "./../../config/server";
 
 import {
-   WORDCLOUD_FETCH_START,
-   WORDCLOUD_FETCH_SUCCESS,
-   WORDCLOUD_FETCH_ERROR
+   SUNBURST_FETCH_START,
+   SUNBURST_FETCH_SUCCESS,
+   SUNBURST_FETCH_ERROR
 } from './actionTypes'
 
 import Axios from "axios";
 
 export function requestData() {
    return {
-      type: WORDCLOUD_FETCH_START,
-      wordCloud: {
+      type: SUNBURST_FETCH_START,
+      sunBurst: {
          data: [],
          isFetching: true
       }
@@ -21,8 +21,8 @@ export function requestData() {
 
 export function receiveData(json) {
    return {
-      type: WORDCLOUD_FETCH_SUCCESS,
-      wordCloud: {
+      type: SUNBURST_FETCH_SUCCESS,
+      sunBurst: {
          isFetching: false,
          data: json
       },
@@ -32,8 +32,8 @@ export function receiveData(json) {
 
 export function errorData(graph, errMsg) {
    return {
-      type: WORDCLOUD_FETCH_ERROR,
-      wordCloud: {
+      type: SUNBURST_FETCH_ERROR,
+      sunBurst: {
          isFetching: false,
          data: []
       }
