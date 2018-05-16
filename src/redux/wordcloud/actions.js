@@ -9,7 +9,7 @@ import {
 
 import Axios from "axios";
 
-export function requestData(graphType) {
+export function requestData() {
    return {
       type: WORDCLOUD_FETCH_START,
       wordCloud: {
@@ -19,11 +19,14 @@ export function requestData(graphType) {
    }
 }
 
-export function receiveData(graph, json) {
+export function receiveData(json) {
    return {
       type: WORDCLOUD_FETCH_SUCCESS,
-      graph,
-      data: json.data
+      wordCloud: {
+         isFetching: false,
+         data: json
+      },
+
    }
 }
 
@@ -36,13 +39,11 @@ export function errorData(graph, errMsg) {
 }
 
 export const fetchData = graphType => async dispatch => {
-   console.log(23)
-   dispatch(requestData(graphType))
+   dispatch(requestData())
    try {
-      const { data } = await axios.get(`${URL}/words/times`)
-      // dispatch()
-      console.log(data)
+      const { data } = await axios.get(`${URL}/words/all`)
+      setTimeout(() => dispatch(receiveData(data)), 1000)
+      
    } catch (err) {
-      console.log(err)
    }
 }

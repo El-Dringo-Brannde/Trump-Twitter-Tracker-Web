@@ -11,7 +11,6 @@ import { fetchData } from './../redux/wordcloud/actions';
 
 import WordCloud from "./../components/graphs/wordcloud";
 
-// import WordCloud from "./../components/wordcloud";
 
 class WordCloudContainer extends React.Component {
    static propTypes = {
@@ -24,24 +23,20 @@ class WordCloudContainer extends React.Component {
    }
 
    componentDidMount() {
-      console.log(12, this.props)
       const { dispatch } = this.props
-      // dispatch(fetchData('wordCloud'))
+      dispatch(fetchData('wordCloud', 'all'))
    }
 
    render() {
       const { data, isFetching } = this.props
-      console.log(3, this.props)
       return (
-         <WordCloud data={data} />
-         // <div></div>
+         <WordCloud {...this.props} />
       )
    }
 }
 
 
 function mapStateToProps(state) {
-   // console.log(state)
    const {
       data,
       isFetching
