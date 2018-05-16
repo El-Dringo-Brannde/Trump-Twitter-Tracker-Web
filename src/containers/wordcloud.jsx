@@ -1,16 +1,12 @@
 import React from 'react'
 import SkewedContainer from "sc-react";
-import * as axios from 'axios';
 
-import URL from './../config/server'
 import PropTypes from 'prop-types'
 
 import { connect } from 'react-redux'
 import { fetchData } from './../redux/wordcloud/actions';
 
-
 import WordCloud from "./../components/graphs/wordcloud";
-
 
 class WordCloudContainer extends React.Component {
    static propTypes = {
