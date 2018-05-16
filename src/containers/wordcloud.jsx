@@ -6,9 +6,10 @@ import URL from './../config/server'
 import PropTypes from 'prop-types'
 
 import { connect } from 'react-redux'
-import { fetchData } from "./../actions/graphs";
+import { fetchData } from './../redux/wordcloud/actions';
 
-import { FETCH_DATA_START } from './../actions/index'
+
+import WordCloud from "./../components/graphs/wordcloud";
 
 // import WordCloud from "./../components/wordcloud";
 
@@ -23,35 +24,34 @@ class WordCloudContainer extends React.Component {
    }
 
    componentDidMount() {
-      console.log(this.props)
+      console.log(12, this.props)
       const { dispatch } = this.props
-      dispatch(fetchData({ type: FETCH_DATA_START }))
+      // dispatch(fetchData('wordCloud'))
    }
 
    render() {
       const { data, isFetching } = this.props
-      console.log(this.props)
+      console.log(3, this.props)
       return (
-         // <WordCloud data={data} />
-         <div></div>
+         <WordCloud data={data} />
+         // <div></div>
       )
    }
 }
 
 
 function mapStateToProps(state) {
-   console.log(state)
+   // console.log(state)
    const {
-      isFetching,
-      data
-   } = state.getData || {
+      data,
+      isFetching
+   } = state.wordCloud || {
       isFetching: true,
       data: []
    }
 
    return {
-      data,
-      isFetching
+      data, isFetching
    }
 }
 

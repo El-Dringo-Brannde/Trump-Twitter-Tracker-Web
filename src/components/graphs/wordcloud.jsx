@@ -2,7 +2,7 @@ import React from 'react'
 import SkewedContainer from "sc-react";
 import * as axios from 'axios';
 
-import URL from './../config/server'
+import URL from './../../config/server'
 
 // import Highcharts from 'highcharts';
 // import wordcloud from 'highcharts/modules/wordcloud';
@@ -29,7 +29,6 @@ import URL from './../config/server'
 // }
 
 const WordCloud = (...props) => {
-   // console.log(...props)
    return (
       <SkewedContainer
          top='left'
