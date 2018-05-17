@@ -5,9 +5,11 @@
    "homepage": "https://el-dringo-brannde.github.io/Trump-Twitter-Tracker-Web/",
    "dependencies": {
       "axios": "^0.18.0",
+      "bootstrap": "^4.1.1",
       "gh-pages": "^1.1.0",
       "highcharts": "^6.1.0",
       "material-ui": "^1.0.0-beta.44",
+      "mdbreact": "^4.3.0",
       "react": "^16.3.2",
       "react-dom": "^16.3.2",
       "react-redux": "^5.0.7",
