@@ -1,5 +1,4 @@
 import React from 'react'
-import SkewedContainer from "sc-react";
 import PropTypes from 'prop-types'
 
 import { connect } from 'react-redux'
@@ -11,10 +10,6 @@ class HeatMapContainer extends React.Component {
    static propTypes = {
       data: PropTypes.array.isRequired,
       isFetching: PropTypes.bool.isRequired
-   }
-
-   constructor(props) {
-      super(props);
    }
 
    componentDidMount() {

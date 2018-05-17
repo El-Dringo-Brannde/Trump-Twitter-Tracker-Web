@@ -8,7 +8,7 @@ import wordCloudConfig from './../../config/graphs/wordcloud'
 
 export class WordCloud extends React.Component {
    componentDidUpdate() {
-      if (this.props.data.length != 0)
+      if (this.props.data.length !== 0)
          wordCloudConfig(this.props.data)
    }
 
@@ -18,7 +18,7 @@ export class WordCloud extends React.Component {
             top='left'
             bgColor="#03A9F4"
             noMargin
-            style={{ width: '100%' }}>
+            style={{ marginTop: 50, width: '100%' }}>
             {
                this.props.isFetching ?
                   <Grid

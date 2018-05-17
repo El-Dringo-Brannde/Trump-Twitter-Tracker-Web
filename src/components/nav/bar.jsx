@@ -1,7 +1,13 @@
-import React, { Component } from 'react';
-import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
-import Typography from 'material-ui/Typography';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from 'react';
+import {
+   Navbar,
+   NavbarBrand,
+   NavbarNav,
+   NavbarToggler,
+   Collapse,
+   NavItem,
+   NavLink
+} from 'mdbreact';
 
 export default class NavBar extends React.Component {
    constructor(props) {
@@ -29,7 +35,7 @@ export default class NavBar extends React.Component {
 
    render() {
       return (
-         <Navbar light color="blue-grey lighten-5" expand="lg" fixed='top' style={{ marginBottom: 150 }}>
+         <Navbar light color="blue-grey lighten-5" expand="lg" fixed='top' style={{ marginBottom: 250 }}>
             <NavbarBrand href="/">
                <strong>Trump Twitter Tracker</strong>
             </NavbarBrand>
