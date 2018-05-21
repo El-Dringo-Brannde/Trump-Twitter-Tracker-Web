@@ -8,18 +8,17 @@ import heatMapConfig from "./../../config/graphs/heatmap";
 
 export default class HeatMap extends React.Component {
    componentDidUpdate() {
-      if (this.props.data.length != 0)
-         heatMapConfig(this.props.data)
+      if (this.props.data.length !== 0)
+      heatMapConfig(this.props.data)
    }
 
    render() {
       return (
          <SkewedContainer
-            top="left"
             bgColor="#F44336"
             noMargin
             className='about-me'
-            style={{ width: '100%' }}>
+            style={{ marginTop: 50, width: '100%' }}>
             {
                this.props.isFetching ?
                   <Grid

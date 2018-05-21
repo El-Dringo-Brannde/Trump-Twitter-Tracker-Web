@@ -7,8 +7,6 @@ import {
    WORDCLOUD_FETCH_ERROR
 } from './actionTypes'
 
-import Axios from "axios";
-
 export function requestData() {
    return {
       type: WORDCLOUD_FETCH_START,
