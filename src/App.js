@@ -12,6 +12,7 @@ import NavBar from './components/nav/bar'
 import {
    BrowserRouter as Router,
    Route,
+   Redirect
 } from 'react-router-dom'
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
                <Route path='/sunburst' component={SunBurstContainer} />
                <Route path='/heatmap' component={HeatMapContainer} />
                <Route path='/all' component={AllContainer} />
+               <Redirect from='/' to='/all' />
             </div>
          </Router>
       );

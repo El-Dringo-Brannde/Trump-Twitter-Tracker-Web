@@ -46,7 +46,6 @@ class WordCloudContainer extends React.Component {
 
 
 function mapStateToProps(state) {
-   console.log(state)
    const {
       data,
       isFetching

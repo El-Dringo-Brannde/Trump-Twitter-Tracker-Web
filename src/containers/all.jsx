@@ -7,9 +7,7 @@ import { fetchData as heatMapFetch } from './../redux/heatmap/actions';
 
 import SunBurstContainer from './sunburst'
 import WordCloudContainer from './wordcloud'
-import HeatMap from "./heatmap";
-
-import { isEqual } from 'lodash'
+import HeatMapContainer from "./heatmap";
 
 class AllContainer extends React.Component {
 
@@ -18,7 +16,7 @@ class AllContainer extends React.Component {
          <div>
             <WordCloudContainer />
             <SunBurstContainer />
-            {/* <HeatMap {...this.props} /> */}
+            <HeatMapContainer />
          </div>
       )
    }
