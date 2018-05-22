@@ -14,7 +14,7 @@ class HeatMapContainer extends React.Component {
 
    componentDidMount() {
       const { dispatch } = this.props
-      dispatch(fetchData('sunBurst', 'times'))
+      dispatch(fetchData('heatmap'))
    }
 
    render() {

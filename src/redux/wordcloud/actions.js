@@ -7,7 +7,7 @@ import {
    WORDCLOUD_FETCH_ERROR
 } from './actionTypes'
 
-export function requestData() {
+export function wordCloudRequestData() {
    return {
       type: WORDCLOUD_FETCH_START,
       wordCloud: {
@@ -23,8 +23,7 @@ export function receiveData(json) {
       wordCloud: {
          isFetching: false,
          data: json
-      },
-
+      }
    }
 }
 
@@ -38,10 +37,10 @@ export function errorData(graph, errMsg) {
    }
 }
 
-export const fetchData = (graphType, route) => async dispatch => {
-   dispatch(requestData())
+export const fetchData = (route, filter) => async dispatch => {
+   dispatch(wordCloudRequestData())
    try {
-      const { data } = await axios.get(`${URL}/words/${route}`)
+      const { data } = await axios.get(`${URL}/graphs/${route}?type=${filter}`)
       setTimeout(() => dispatch(receiveData(data)), 1000)
    } catch (err) { }
 }

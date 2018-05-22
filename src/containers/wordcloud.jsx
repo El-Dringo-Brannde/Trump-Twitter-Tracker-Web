@@ -11,21 +11,42 @@ class WordCloudContainer extends React.Component {
       data: PropTypes.array.isRequired,
       isFetching: PropTypes.bool.isRequired
    }
+   constructor(props) {
+      super(props)
+
+      const { dispatch } = this.props
+      this.tabs = [
+         {
+            label: '1 Word',
+            onClick: () => { dispatch(fetchData('wordcloud', 1)); this.tabVal = 0 }
+         },
+         {
+            label: '2 Word',
+            onClick: () => { dispatch(fetchData('wordcloud', 2)); this.tabVal = 1 }
+         },
+         {
+            label: '3 Word',
+            onClick: () => { dispatch(fetchData('wordcloud', 3)); this.tabVal = 2 }
+         }
+      ]
+      this.tabVal = 0
+   }
 
    componentDidMount() {
       const { dispatch } = this.props
-      dispatch(fetchData('wordCloud', 'all'))
+      dispatch(fetchData('wordcloud', 1))
    }
 
    render() {
       return (
-         <WordCloud {...this.props} />
+         <WordCloud {...this.props} tabs={this.tabs} tabVal={this.tabVal} />
       )
    }
 }
 
 
 function mapStateToProps(state) {
+   console.log(state)
    const {
       data,
       isFetching

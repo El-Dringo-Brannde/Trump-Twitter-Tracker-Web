@@ -1,15 +1,15 @@
 import React from 'react'
 import SkewedContainer from "sc-react";
 
-import { CircularProgress } from 'material-ui/Progress';
-import Grid from 'material-ui/Grid';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Grid from '@material-ui/core/Grid';
 
 import heatMapConfig from "./../../config/graphs/heatmap";
 
 export default class HeatMap extends React.Component {
    componentDidUpdate() {
       if (this.props.data.length !== 0)
-      heatMapConfig(this.props.data)
+         heatMapConfig(this.props.data)
    }
 
    render() {

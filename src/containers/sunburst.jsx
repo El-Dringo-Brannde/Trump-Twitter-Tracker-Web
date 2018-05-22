@@ -12,15 +12,26 @@ class SunBurstContainer extends React.Component {
       data: PropTypes.array.isRequired,
       isFetching: PropTypes.bool.isRequired
    }
+   constructor(props) {
+      super(props)
+   }
+
 
    componentDidMount() {
       const { dispatch } = this.props
-      dispatch(fetchData('sunBurst', 'types'))
+      console.log(123)
+      dispatch(fetchData('sunburst'))
+   }
+
+   componentWillUpdate(prevProps, prevState) {
+      console.log('foo325');
    }
 
    render() {
       return (
-         <SunBurst {...this.props} />
+         <div>
+            <SunBurst {...this.props} />
+         </div>
       )
    }
 }
