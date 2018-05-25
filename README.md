@@ -19,8 +19,8 @@ Used this project to learn Redux, as of now Redux is **Completely overkill** and
 ## To Do 
 1. Add line chart to track Trump tweet times 
 2. Add area range chart to track Trump tweet times
-3. Add ability to query time limits for sunburst and wordcloud 
-4. Filter by word types for wordcloud 
+3. ~~Add ability to query time limits for sunburst and wordcloud~~
+4. ~~Filter by word types for wordcloud~~
 5. Add home/about page. 
 6. Pull Trumps last tweet on home page.  
 
