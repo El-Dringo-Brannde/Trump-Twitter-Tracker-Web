@@ -37,11 +37,10 @@ export function errorData(graph, errMsg) {
    }
 }
 
-export const fetchData = (route) => async dispatch => {
+export const fetchData = (start, stop) => async dispatch => {
    dispatch(requestData())
-   console.log(`${URL}/graphs/${route}`)
    try {
-      const { data } = await axios.get(`${URL}/graphs/${route}`)
+      const { data } = await axios.get(`${URL}/graphs/heatmap?start=${start.toISOString()}&stop=${stop.toISOString()}`)
       setTimeout(() => dispatch(receiveData(data)), 1000)
    } catch (err) { }
 }

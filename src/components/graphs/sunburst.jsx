@@ -11,11 +11,8 @@ import { Paper } from '@material-ui/core';
 
 export default class SunBurst extends React.Component {
    async componentDidUpdate(prevProps, prevState) {
-      if (this.props.data.length != 0 && !this.props.isFetching) {
-         console.log(1)
+      if (this.props.data.length != 0 && !this.props.isFetching)
          sunBurstConfig(this.props.data)
-      }
-
    }
 
    render() {

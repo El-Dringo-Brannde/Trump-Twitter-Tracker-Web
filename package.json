@@ -2,7 +2,7 @@
    "name": "trump-twitter-tracker-web",
    "version": "0.1.0",
    "private": true,
-   "homepage": "https://el-dringo-brannde.github.io/trump-twitter-tracker/",
+   "homepage": "https://el-dringo-brannde.github.io/Trump-Twitter-Tracker-Web/",
    "dependencies": {
       "@material-ui/core": "^1.0.0",
       "axios": "^0.18.0",

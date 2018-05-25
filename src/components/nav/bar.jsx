@@ -36,23 +36,23 @@ export default class NavBar extends React.Component {
    render() {
       return (
          <Navbar light color="blue-grey lighten-5" expand="lg" fixed='top' style={{ marginBottom: 250 }}>
-            <NavbarBrand href="/">
+            <NavbarBrand href="/Trump-Twitter-Tracker-Web/all">
                <strong>Trump Twitter Tracker</strong>
             </NavbarBrand>
             {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
             <Collapse isOpen={this.state.collapse} navbar>
                <NavbarNav right >
                   <NavItem color="blue-grey lighten-5">
-                     <NavLink to='/trump-twitter-tracker/sunburst'
+                     <NavLink to='/Trump-Twitter-Tracker-Web/sunburst'
                         className="nav-link">
                         Sun Burst
                       </NavLink>
                   </NavItem>
                   <NavItem>
-                     <NavLink to="/trump-twitter-tracker/wordcloud">Word Cloud</NavLink>
+                     <NavLink to="/Trump-Twitter-Tracker-Web/wordcloud">Word Cloud</NavLink>
                   </NavItem>
                   <NavItem>
-                     <NavLink to="/trump-twitter-tracker/heatmap">
+                     <NavLink to="/Trump-Twitter-Tracker-Web/heatmap">
                         Heat Map
                         </NavLink>
                   </NavItem>

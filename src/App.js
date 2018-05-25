@@ -6,8 +6,8 @@ import HeatMapContainer from "./containers/heatmap";
 import SunBurstContainer from './containers/sunburst'
 import WordCloudContainer from './containers/wordcloud'
 import AllContainer from './containers/all'
+import Lost from './components/nav/404'
 import NavBar from './components/nav/bar'
-
 
 import {
    BrowserRouter as Router,
@@ -22,11 +22,11 @@ class App extends Component {
             <div>
                <NavBar />
                <Switch>
-                  <Route path='/trump-twitter-tracker/wordcloud' component={WordCloudContainer} />
-                  <Route path='/trump-twitter-tracker/sunburst' component={SunBurstContainer} />
-                  <Route path='/trump-twitter-tracker/heatmap' component={HeatMapContainer} />
-                  <Route path='/trump-twitter-tracker/all' component={AllContainer} />
-                  <Route component={AllContainer} />
+                  <Route path='/Trump-Twitter-Tracker-Web/wordcloud' component={WordCloudContainer} />
+                  <Route path='/Trump-Twitter-Tracker-Web/sunburst' component={SunBurstContainer} />
+                  <Route path='/Trump-Twitter-Tracker-Web/heatmap' component={HeatMapContainer} />
+                  <Route path='/Trump-Twitter-Tracker-Web/all' component={AllContainer} />
+                  <Route component={Lost} />
                </Switch>
             </div>
          </Router>

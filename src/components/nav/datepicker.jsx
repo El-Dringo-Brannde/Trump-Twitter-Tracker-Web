@@ -14,6 +14,7 @@ const DatePickers = (props) => {
                      value={el.value}
                      format='YYYY/MM/DD'
                      onChange={momentDate => el.onChange(momentDate, idx)}
+                     minDate='2017-02-10'
                      disableFuture
                      showTodayButton
                      clearable
