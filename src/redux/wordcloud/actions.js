@@ -37,10 +37,10 @@ export function errorData(graph, errMsg) {
    }
 }
 
-export const fetchData = (route, filter) => async dispatch => {
+export const fetchData = filter => async dispatch => {
    dispatch(wordCloudRequestData())
    try {
-      const { data } = await axios.get(`${URL}/graphs/${route}?type=${filter}`)
+      const { data } = await axios.get(`${URL}/graphs/wordcloud?type=${filter}`)
       setTimeout(() => dispatch(receiveData(data)), 1000)
    } catch (err) { }
 }

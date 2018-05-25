@@ -7,8 +7,6 @@ import {
 import initialState from './../state';
 
 export default function wordCloud(state = initialState, action) {
-   console.log('WORDCLOUD REDUCER', action)
-   console.log('WORDCLOUD REDUCER', state)
    switch (action.type) {
       case WORDCLOUD_FETCH_START:
          return {

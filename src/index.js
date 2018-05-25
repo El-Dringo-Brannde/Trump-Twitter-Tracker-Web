@@ -9,9 +9,15 @@ import registerServiceWorker from './registerServiceWorker';
 
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import MuiPickersUtilsProvider from 'material-ui-pickers/utils/MuiPickersUtilsProvider';
+import MomentUtils from 'material-ui-pickers/utils/moment-utils';
+
 
 ReactDOM.render(
    <Provider store={store}>
-      <App />
+      <MuiPickersUtilsProvider utils={MomentUtils}>
+         <App />
+      </MuiPickersUtilsProvider>
    </Provider >, document.getElementById('root'));
+
 registerServiceWorker();

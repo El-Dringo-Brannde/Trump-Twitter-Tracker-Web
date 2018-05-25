@@ -43,16 +43,16 @@ export default class NavBar extends React.Component {
             <Collapse isOpen={this.state.collapse} navbar>
                <NavbarNav right >
                   <NavItem color="blue-grey lighten-5">
-                     <NavLink to='/sunburst'
+                     <NavLink to='/trump-twitter-tracker/sunburst'
                         className="nav-link">
                         Sun Burst
                       </NavLink>
                   </NavItem>
                   <NavItem>
-                     <NavLink to="/wordcloud">Word Cloud</NavLink>
+                     <NavLink to="/trump-twitter-tracker/wordcloud">Word Cloud</NavLink>
                   </NavItem>
                   <NavItem>
-                     <NavLink to="/heatmap">
+                     <NavLink to="/trump-twitter-tracker/heatmap">
                         Heat Map
                         </NavLink>
                   </NavItem>

@@ -7,8 +7,6 @@ import {
 import initialState from './../state';
 
 export default function sunBurst(state = initialState, action) {
-   console.log('SUNBURST REDUCER', action)
-   console.log('SUNBURST REDUCER', state)
    switch (action.type) {
       case SUNBURST_FETCH_START:
          return {

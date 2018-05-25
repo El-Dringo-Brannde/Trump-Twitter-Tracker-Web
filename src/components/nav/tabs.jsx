@@ -17,7 +17,6 @@ class CenteredTabs extends React.Component {
       value: 0,
    };
 
-
    render() {
       const { classes } = this.props;
 
@@ -32,6 +31,7 @@ class CenteredTabs extends React.Component {
                {this.props.tabs.map((tab, idx) => {
                   return (
                      <Tab
+                        key={idx}
                         label={tab.label}
                         onClick={tab.onClick}
                      />

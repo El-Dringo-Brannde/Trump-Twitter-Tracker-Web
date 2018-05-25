@@ -18,15 +18,15 @@ class WordCloudContainer extends React.Component {
       this.tabs = [
          {
             label: '1 Word',
-            onClick: () => { dispatch(fetchData('wordcloud', 1)); this.tabVal = 0 }
+            onClick: () => { dispatch(fetchData(1)); this.tabVal = 0 }
          },
          {
             label: '2 Word',
-            onClick: () => { dispatch(fetchData('wordcloud', 2)); this.tabVal = 1 }
+            onClick: () => { dispatch(fetchData(2)); this.tabVal = 1 }
          },
          {
             label: '3 Word',
-            onClick: () => { dispatch(fetchData('wordcloud', 3)); this.tabVal = 2 }
+            onClick: () => { dispatch(fetchData(3)); this.tabVal = 2 }
          }
       ]
       this.tabVal = 0
@@ -34,7 +34,7 @@ class WordCloudContainer extends React.Component {
 
    componentDidMount() {
       const { dispatch } = this.props
-      dispatch(fetchData('wordcloud', 1))
+      dispatch(fetchData(1))
    }
 
    render() {

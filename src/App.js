@@ -12,7 +12,7 @@ import NavBar from './components/nav/bar'
 import {
    BrowserRouter as Router,
    Route,
-   Redirect
+   Switch
 } from 'react-router-dom'
 
 class App extends Component {
@@ -21,11 +21,13 @@ class App extends Component {
          <Router>
             <div>
                <NavBar />
-               <Route path='/wordcloud' component={WordCloudContainer} />
-               <Route path='/sunburst' component={SunBurstContainer} />
-               <Route path='/heatmap' component={HeatMapContainer} />
-               <Route path='/all' component={AllContainer} />
-               <Redirect from='/' to='/all' />
+               <Switch>
+                  <Route path='/trump-twitter-tracker/wordcloud' component={WordCloudContainer} />
+                  <Route path='/trump-twitter-tracker/sunburst' component={SunBurstContainer} />
+                  <Route path='/trump-twitter-tracker/heatmap' component={HeatMapContainer} />
+                  <Route path='/trump-twitter-tracker/all' component={AllContainer} />
+                  <Route component={AllContainer} />
+               </Switch>
             </div>
          </Router>
       );

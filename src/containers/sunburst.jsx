@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { fetchData } from './../redux/sunburst/actions';
 
 import SunBurst from "./../components/graphs/sunburst";
+import * as moment from 'moment'
 
 
 class SunBurstContainer extends React.Component {
@@ -13,15 +14,38 @@ class SunBurstContainer extends React.Component {
       isFetching: PropTypes.bool.isRequired
    }
 
+   constructor(props) {
+      super(props);
+      const { dispatch } = this.props
+      this.datePickers = [
+         {
+            label: 'Start',
+            onChange: (moment, idx) => {
+               this.datePickers[idx].value = moment._d
+               dispatch(fetchData(moment._d, this.datePickers[1].value, 1))
+            },
+            value: moment().subtract(1, 'years')
+         },
+         {
+            label: 'Stop',
+            onChange: (moment, idx) => {
+               this.datePickers[idx].value = moment._d
+               dispatch(fetchData(moment._d, this.datePickers[0].value, 1))
+            },
+            value: moment()
+         }
+      ]
+   }
+
    componentDidMount() {
       const { dispatch } = this.props
-      dispatch(fetchData('sunburst'))
+      dispatch(fetchData(moment().subtract(1, 'years'), moment(), 1))
    }
 
    render() {
       return (
          <div>
-            <SunBurst {...this.props} />
+            <SunBurst {...this.props} datePickers={this.datePickers} />
          </div>
       )
    }

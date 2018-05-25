@@ -38,10 +38,10 @@ export function errorData(graph, errMsg) {
    }
 }
 
-export const fetchData = (route) => async dispatch => {
+export const fetchData = (start, stop, type) => async dispatch => {
    dispatch(requestData())
    try {
-      const { data } = await axios.get(`${URL}/graphs/${route}`)
+      const { data } = await axios.get(`${URL}/graphs/sunburst?start=${start.toISOString()}&stop=${stop.toISOString()}&type=${type}`)
       setTimeout(() => dispatch(receiveData(data)), 1000)
    } catch (err) { }
 }
