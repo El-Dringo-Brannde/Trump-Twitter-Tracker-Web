@@ -1,4 +1,4 @@
-## [Trump Twitter Tracker Web](https://el-dringo-brannde.github.io/Trump-Twitter-Tracker-Web/)
+## [Trump Twitter Tracker Web](https://el-dringo-brannde.github.io/Trump-Twitter-Tracker-Web/all)
 
 
 
@@ -6,7 +6,7 @@
 A React Redux site to parse data from the server to provide some data visualization for Trumps Tweets. Wordcloud that aggregates his most commonly used words, sunburst charts to categorize each word via noun, adjective, adverb, and verb. Finally, a heatmap to track at what times he posts the tweets, and average them throughout the week.
    
 
-Deployed via Github Pages [here](https://el-dringo-brannde.github.io/Trump-Twitter-Tracker-Web/)
+Deployed via Github Pages [here](https://el-dringo-brannde.github.io/Trump-Twitter-Tracker-Web/all)
 
 
 ### _Note_
