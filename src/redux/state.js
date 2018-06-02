@@ -10,6 +10,10 @@ const initialState = {
    sunBurst: {
       data: [],
       isFetching: false
+   },
+   mentions: {
+      data: [],
+      isFetching: false
    }
 }
 
