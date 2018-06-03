@@ -17,9 +17,9 @@ export default class HeatMap extends React.Component {
       return (
          <SkewedContainer
             bgColor="#F44336"
+            top='right'
             noMargin
-            className='about-me'
-            style={{ marginTop: 50, width: '100%' }}>
+            style={{ padding: '75px 0px', width: '100%' }}>
             <Grid
                container
                alignItems={'center'}

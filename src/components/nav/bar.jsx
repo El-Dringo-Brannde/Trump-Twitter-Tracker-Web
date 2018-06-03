@@ -61,6 +61,11 @@ export default class NavBar extends React.Component {
                         Mentions
                         </NavLink>
                   </NavItem>
+                  <NavItem>
+                     <NavLink to="/Trump-Twitter-Tracker-Web/hashtags">
+                        Hashtags
+                        </NavLink>
+                  </NavItem>
                </NavbarNav>
             </Collapse>
          </Navbar>

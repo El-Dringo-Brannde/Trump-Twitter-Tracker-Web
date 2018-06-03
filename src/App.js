@@ -7,6 +7,7 @@ import SunBurstContainer from './containers/sunburst'
 import WordCloudContainer from './containers/wordcloud'
 import AllContainer from './containers/all'
 import MentionsContainer from "./containers/mentions";
+import HashtagsContainer from './containers/hashtags'
 
 import Lost from './components/nav/404'
 import NavBar from './components/nav/bar'
@@ -29,6 +30,7 @@ class App extends Component {
                   <Route path='/Trump-Twitter-Tracker-Web/heatmap' component={HeatMapContainer} />
                   <Route path='/Trump-Twitter-Tracker-Web/all' component={AllContainer} />
                   <Route path='/Trump-Twitter-Tracker-Web/mentions' component={MentionsContainer} />
+                  <Route path='/Trump-Twitter-Tracker-Web/hashtags' component={HashtagsContainer} />
                   <Route component={Lost} />
                </Switch>
             </div>

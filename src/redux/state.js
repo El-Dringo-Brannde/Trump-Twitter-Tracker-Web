@@ -14,6 +14,10 @@ const initialState = {
    mentions: {
       data: [],
       isFetching: false
+   },
+   hashtags: {
+      data: [],
+      isFetching: false
    }
 }
 

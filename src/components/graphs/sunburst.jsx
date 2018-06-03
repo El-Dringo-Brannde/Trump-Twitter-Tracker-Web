@@ -18,8 +18,9 @@ export default class SunBurst extends React.Component {
       return (
          <SkewedContainer
             bgColor="#9C27B0"
+            top='right'
             noMargin
-            style={{ marginTop: 50, width: '100%' }}>
+            style={{ padding: '75px 0px', width: '100%' }}>
             <Grid
                container
                alignItems={'center'}

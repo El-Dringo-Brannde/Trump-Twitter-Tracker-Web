@@ -19,26 +19,23 @@ export default class Columns extends React.Component {
       const { columnConfig } = this.props
       return (
          <SkewedContainer
-            bgColor="#F44336"
+            bgColor="#B71C1C"
+            top='left'
             noMargin
-            style={{ marginTop: 50, width: '100%' }}>
+            style={{ padding: '75px 0px', width: '100%' }}>
             <DatePickers
                datePickers={this.props.datePickers} />
             {
                this.props.isFetching ?
-                  <div style={{ marginTop: '15vh' }}>
-                     <Grid
-                        container
-                        alignItems={'center'}
-                        justify={'center'}
-                     >
-                        <CircularProgress size={150} />
-                     </Grid>
-                  </div>
+                  <Grid
+                     container
+                     alignItems={'center'}
+                     justify={'center'}
+                  >
+                     <CircularProgress size={150} />
+                  </Grid>
                   :
-                  <div style={{ marginTop: '15vh' }}>
-                     <div id={columnConfig.containerID}></div>
-                  </div>
+                  <div id={columnConfig.containerID}></div>
             }
          </SkewedContainer>
       )

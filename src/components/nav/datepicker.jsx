@@ -14,7 +14,7 @@ const DatePickers = (props) => {
          {
             props.datePickers.map((el, idx) => {
                return (
-                  <Paper style={{ margin: 25, padding: 25 }}>
+                  <Paper style={{ margin: 25, padding: 25 }} key={idx}>
                      <DatePicker
                         style={{ padding: 5 }}
                         key={idx}
