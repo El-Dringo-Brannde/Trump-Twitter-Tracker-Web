@@ -6,7 +6,6 @@ import Grid from '@material-ui/core/Grid';
 import DatePickers from './../nav/datepicker'
 
 import sunBurstConfig from './../../config/graphs/sunburst'
-import { Paper } from '@material-ui/core';
 
 
 export default class SunBurst extends React.Component {
@@ -26,9 +25,8 @@ export default class SunBurst extends React.Component {
                alignItems={'center'}
                justify={'center'}
             >
-               <Paper style={{ margin: 50, padding: 25 }} >
-                  <DatePickers datePickers={this.props.datePickers} />
-               </Paper>
+               <DatePickers datePickers={this.props.datePickers} />
+
             </Grid>
             {
                this.props.isFetching ?

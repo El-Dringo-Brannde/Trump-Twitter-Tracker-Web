@@ -7,6 +7,13 @@ import { fetchData } from './../redux/mentions/actions';
 import Columns from "./../components/graphs/column";
 import * as moment from 'moment'
 
+let mentionConfig = {
+   containerID: 'Mentions',
+   yAxis: 'Mentioned Count',
+   toolTip: '<b> Times mentioned: {point.y}</b>',
+   title: 'Trump\'s Most Popular Tweet Mentions'
+}
+
 
 class MentionsContainer extends React.Component {
    static propTypes = {
@@ -32,7 +39,7 @@ class MentionsContainer extends React.Component {
                this.datePickers[idx].value = moment._d
                dispatch(fetchData(moment._d, this.datePickers[0].value, 1))
             },
-            value: moment()
+            value: moment('2018-05-20')
          }
       ]
    }
@@ -45,7 +52,11 @@ class MentionsContainer extends React.Component {
    render() {
       return (
          <div>
-            <Columns {...this.props} datePickers={this.datePickers} />
+            <Columns
+               {...this.props}
+               datePickers={this.datePickers}
+               columnConfig={mentionConfig}
+            />
          </div>
       )
    }
@@ -56,7 +67,7 @@ function mapStateToProps(state) {
    const {
       data,
       isFetching
-   } = state.mention || {
+   } = state.mentions || {
       isFetching: true,
       data: []
    }
