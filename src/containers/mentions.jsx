@@ -2,13 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { connect } from 'react-redux'
-import { fetchData } from './../redux/sunburst/actions';
+import { fetchData } from './../redux/mentions/actions';
 
-import SunBurst from "./../components/graphs/sunburst";
+import Columns from "./../components/graphs/column";
 import * as moment from 'moment'
 
+let mentionConfig = {
+   containerID: 'Mentions',
+   yAxis: 'Mentioned Count',
+   toolTip: '<b> Times mentioned: {point.y}</b>',
+   title: 'Trump\'s Most Popular Tweet Mentions'
+}
 
-class SunBurstContainer extends React.Component {
+
+class MentionsContainer extends React.Component {
    static propTypes = {
       data: PropTypes.array.isRequired,
       isFetching: PropTypes.bool.isRequired
@@ -45,7 +52,11 @@ class SunBurstContainer extends React.Component {
    render() {
       return (
          <div>
-            <SunBurst {...this.props} datePickers={this.datePickers} />
+            <Columns
+               {...this.props}
+               datePickers={this.datePickers}
+               columnConfig={mentionConfig}
+            />
          </div>
       )
    }
@@ -56,7 +67,7 @@ function mapStateToProps(state) {
    const {
       data,
       isFetching
-   } = state.sunBurst || {
+   } = state.mentions || {
       isFetching: true,
       data: []
    }
@@ -66,4 +77,4 @@ function mapStateToProps(state) {
    }
 }
 
-export default connect(mapStateToProps)(SunBurstContainer)
+export default connect(mapStateToProps)(MentionsContainer)

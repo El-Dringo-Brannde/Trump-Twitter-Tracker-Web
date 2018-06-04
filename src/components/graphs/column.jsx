@@ -5,30 +5,26 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
 import DatePickers from './../nav/datepicker'
 
-import sunBurstConfig from './../../config/graphs/sunburst'
+import columnConfig from "./../../config/graphs/columns";
 
-
-export default class SunBurst extends React.Component {
-   async componentDidUpdate(prevProps, prevState) {
-      if (this.props.data.length != 0 && !this.props.isFetching)
-         sunBurstConfig(this.props.data)
+export default class Columns extends React.Component {
+   componentDidUpdate() {
+      if (this.props.data.length !== 0 && !this.props.isFetching) {
+         this.props.columnConfig.data = this.props.data
+         columnConfig(this.props.columnConfig)
+      }
    }
 
    render() {
+      const { columnConfig } = this.props
       return (
          <SkewedContainer
-            bgColor="#9C27B0"
-            top='right'
+            bgColor="#B71C1C"
+            top='left'
             noMargin
             style={{ padding: '75px 0px', width: '100%' }}>
-            <Grid
-               container
-               alignItems={'center'}
-               justify={'center'}
-            >
-               <DatePickers datePickers={this.props.datePickers} />
-
-            </Grid>
+            <DatePickers
+               datePickers={this.props.datePickers} />
             {
                this.props.isFetching ?
                   <Grid
@@ -39,10 +35,9 @@ export default class SunBurst extends React.Component {
                      <CircularProgress size={150} />
                   </Grid>
                   :
-                  <div id='sunburst' style={{ marginBottom: 100 }} ></div>
+                  <div id={columnConfig.containerID}></div>
             }
          </SkewedContainer>
       )
    }
 }
-

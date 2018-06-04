@@ -45,15 +45,25 @@ export default class NavBar extends React.Component {
                   <NavItem color="blue-grey lighten-5">
                      <NavLink to='/Trump-Twitter-Tracker-Web/sunburst'
                         className="nav-link">
-                        Sun Burst
+                        Word Types
                       </NavLink>
                   </NavItem>
                   <NavItem>
-                     <NavLink to="/Trump-Twitter-Tracker-Web/wordcloud">Word Cloud</NavLink>
+                     <NavLink to="/Trump-Twitter-Tracker-Web/wordcloud">Frequent Words</NavLink>
                   </NavItem>
                   <NavItem>
                      <NavLink to="/Trump-Twitter-Tracker-Web/heatmap">
-                        Heat Map
+                        Tweet Times
+                        </NavLink>
+                  </NavItem>
+                  <NavItem>
+                     <NavLink to="/Trump-Twitter-Tracker-Web/mentions">
+                        Mentions
+                        </NavLink>
+                  </NavItem>
+                  <NavItem>
+                     <NavLink to="/Trump-Twitter-Tracker-Web/hashtags">
+                        Hashtags
                         </NavLink>
                   </NavItem>
                </NavbarNav>

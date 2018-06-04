@@ -2,13 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { connect } from 'react-redux'
-import { fetchData } from './../redux/sunburst/actions';
+import { fetchData } from './../redux/hashtags/actions';
 
-import SunBurst from "./../components/graphs/sunburst";
+import Columns from "./../components/graphs/column";
 import * as moment from 'moment'
 
+let hashtagConfig = {
+   containerID: 'Hashtags',
+   yAxis: 'Hashtag Count',
+   toolTip: '<b> Times Tagged: {point.y}</b>',
+   title: 'Trump\'s Most Popular Hashtags'
+}
 
-class SunBurstContainer extends React.Component {
+
+class HashtagsContainer extends React.Component {
    static propTypes = {
       data: PropTypes.array.isRequired,
       isFetching: PropTypes.bool.isRequired
@@ -45,7 +52,11 @@ class SunBurstContainer extends React.Component {
    render() {
       return (
          <div>
-            <SunBurst {...this.props} datePickers={this.datePickers} />
+            <Columns
+               {...this.props}
+               datePickers={this.datePickers}
+               columnConfig={hashtagConfig}
+            />
          </div>
       )
    }
@@ -56,7 +67,7 @@ function mapStateToProps(state) {
    const {
       data,
       isFetching
-   } = state.sunBurst || {
+   } = state.hashtags || {
       isFetching: true,
       data: []
    }
@@ -66,4 +77,4 @@ function mapStateToProps(state) {
    }
 }
 
-export default connect(mapStateToProps)(SunBurstContainer)
+export default connect(mapStateToProps)(HashtagsContainer)

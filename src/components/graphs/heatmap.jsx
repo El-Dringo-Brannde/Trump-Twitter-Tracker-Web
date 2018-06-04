@@ -4,7 +4,6 @@ import SkewedContainer from "sc-react";
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
 import DatePickers from './../nav/datepicker'
-import { Paper } from '@material-ui/core';
 
 import heatMapConfig from "./../../config/graphs/heatmap";
 
@@ -18,16 +17,14 @@ export default class HeatMap extends React.Component {
       return (
          <SkewedContainer
             bgColor="#F44336"
+            top='right'
             noMargin
-            className='about-me'
-            style={{ marginTop: 50, width: '100%' }}>
+            style={{ padding: '75px 0px', width: '100%' }}>
             <Grid
                container
                alignItems={'center'}
                justify={'center'}>
-               <Paper style={{ margin: 50, padding: 25 }} >
-                  <DatePickers datePickers={this.props.datePickers} />
-               </Paper>
+               <DatePickers datePickers={this.props.datePickers} />
             </Grid>
             {
                this.props.isFetching ?

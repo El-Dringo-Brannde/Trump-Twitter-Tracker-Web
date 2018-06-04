@@ -31,7 +31,7 @@ class HeatMapContainer extends React.Component {
                this.datePickers[idx].value = moment._d
                dispatch(fetchData(moment._d, this.datePickers[0].value, 1))
             },
-            value: moment()
+            value: moment('2018-05-20')
          }
       ]
    }

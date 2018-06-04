@@ -1,0 +1,44 @@
+{
+   "window.zoomLevel": 1,
+   "files.autoSave": "onWindowChange",
+   "editor.tabSize": 3,
+   "explorer.confirmDragAndDrop": false,
+   "editor.minimap.enabled": false,
+   "vsicons.projectDetection.disableDetect": true,
+   "editor.tokenColorCustomizations": {
+      "textMateRules": [
+         {
+            "name": "Variables",
+            "scope": "variable",
+            "settings": {
+               "fontStyle": "italic bold",
+            }
+         }
+      ]
+   },
+   "editor.detectIndentation": false,
+   "editor.formatOnSave": true,
+   "html.format.wrapAttributes": "force-aligned",
+   "editor.scrollBeyondLastLine": false,
+   "workbench.iconTheme": "vscode-icons",
+   "workbench.colorCustomizations": {
+      "editorIndentGuide.activeBackground": "#0bee1e"
+   },
+   "trailing-spaces.trimOnSave": true,
+   "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+   "gitlens.keymap": "alternate",
+   "git.autofetch": true,
+   "gitlens.advanced.messages": {
+      "suppressCommitHasNoPreviousCommitWarning": false,
+      "suppressCommitNotFoundWarning": false,
+      "suppressFileNotUnderSourceControlWarning": false,
+      "suppressGitVersionWarning": false,
+      "suppressLineUncommittedWarning": false,
+      "suppressNoRepositoryWarning": false,
+      "suppressResultsExplorerNotice": false,
+      "suppressShowKeyBindingsNotice": true
+   },
+   "html.format.wrapLineLength": 100,
+   "workbench.colorTheme": "Easy on the eyes",
+   "gitlens.historyExplorer.enabled": true
+}
