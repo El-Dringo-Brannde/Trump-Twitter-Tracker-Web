@@ -16,6 +16,7 @@ import MomentUtils from 'material-ui-pickers/utils/moment-utils';
 ReactDOM.render(
    <Provider store={store}>
       <MuiPickersUtilsProvider utils={MomentUtils}>
+
          <App />
       </MuiPickersUtilsProvider>
    </Provider >, document.getElementById('root'));

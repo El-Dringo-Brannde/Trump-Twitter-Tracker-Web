@@ -13,9 +13,10 @@ import Lost from './components/nav/404'
 import NavBar from './components/nav/bar'
 
 import {
-   BrowserRouter as Router,
+   HashRouter as Router,
    Route,
-   Switch
+   Switch,
+   has
 } from 'react-router-dom'
 
 class App extends Component {
