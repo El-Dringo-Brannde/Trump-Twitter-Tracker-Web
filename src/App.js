@@ -26,12 +26,12 @@ class App extends Component {
             <div>
                <NavBar />
                <Switch>
-                  <Route path={`/wordcloud`} component={WordCloudContainer} />
-                  <Route path={`/sunburst`} component={SunBurstContainer} />
-                  <Route path={`/heatmap`} component={HeatMapContainer} />
-                  <Route path={`/all`} component={AllContainer} />
-                  <Route path={`/mentions`} component={MentionsContainer} />
-                  <Route path={`/hashtags`} component={HashtagsContainer} />
+                  <Route path='/wordcloud' component={WordCloudContainer} />
+                  <Route path='/sunburst' component={SunBurstContainer} />
+                  <Route path='/heatmap' component={HeatMapContainer} />
+                  <Route path='/all' component={AllContainer} />
+                  <Route path='/mentions' component={MentionsContainer} />
+                  <Route path='/hashtags' component={HashtagsContainer} />
                   <Route component={Lost} />
                </Switch>
             </div>
