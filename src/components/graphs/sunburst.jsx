@@ -6,7 +6,6 @@ import Grid from '@material-ui/core/Grid';
 import DatePickers from './../nav/datepicker'
 
 import sunBurstConfig from './../../config/graphs/sunburst'
-import { Paper } from '@material-ui/core';
 
 
 export default class SunBurst extends React.Component {
@@ -19,16 +18,16 @@ export default class SunBurst extends React.Component {
       return (
          <SkewedContainer
             bgColor="#9C27B0"
+            top='right'
             noMargin
-            style={{ marginTop: 50, width: '100%' }}>
+            style={{ padding: '75px 0px', width: '100%' }}>
             <Grid
                container
                alignItems={'center'}
                justify={'center'}
             >
-               <Paper style={{ margin: 50, padding: 25 }} >
-                  <DatePickers datePickers={this.props.datePickers} />
-               </Paper>
+               <DatePickers datePickers={this.props.datePickers} />
+
             </Grid>
             {
                this.props.isFetching ?

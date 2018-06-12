@@ -18,7 +18,7 @@ export class WordCloud extends React.Component {
          <SkewedContainer
             bgColor="#03A9F4"
             noMargin
-            style={{ marginTop: 50, width: '100%' }}>
+            style={{ padding: '50px 0px', width: '100%' }}>
             <CenteredTabs tabs={this.props.tabs} tabVal={this.props.tabVal} />
             {
                this.props.isFetching ?
