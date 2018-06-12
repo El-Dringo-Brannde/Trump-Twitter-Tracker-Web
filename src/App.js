@@ -13,7 +13,7 @@ import Lost from './components/nav/404'
 import NavBar from './components/nav/bar'
 
 import {
-   BrowserRouter as Router,
+   HashRouter as Router,
    Route,
    Switch,
    has
@@ -26,12 +26,12 @@ class App extends Component {
             <div>
                <NavBar />
                <Switch>
-                  <Route path={`${process.env.PUBLIC_URL}/wordcloud`} component={WordCloudContainer} />
-                  <Route path={`${process.env.PUBLIC_URL}/sunburst`} component={SunBurstContainer} />
-                  <Route path={`${process.env.PUBLIC_URL}/heatmap`} component={HeatMapContainer} />
-                  <Route path={`${process.env.PUBLIC_URL}/all`} component={AllContainer} />
-                  <Route path={`${process.env.PUBLIC_URL}/mentions`} component={MentionsContainer} />
-                  <Route path={`${process.env.PUBLIC_URL}/hashtags`} component={HashtagsContainer} />
+                  <Route path={`/wordcloud`} component={WordCloudContainer} />
+                  <Route path={`/sunburst`} component={SunBurstContainer} />
+                  <Route path={`/heatmap`} component={HeatMapContainer} />
+                  <Route path={`/all`} component={AllContainer} />
+                  <Route path={`/mentions`} component={MentionsContainer} />
+                  <Route path={`/hashtags`} component={HashtagsContainer} />
                   <Route component={Lost} />
                </Switch>
             </div>
