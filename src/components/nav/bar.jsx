@@ -36,7 +36,7 @@ export default class NavBar extends React.Component {
    render() {
       return (
          <Navbar light color="blue-grey lighten-5" expand="lg" fixed='top' style={{ marginBottom: 250 }}>
-            <NavLink to="/all">
+            <NavLink to="/">
                <strong>Trump Twitter Tracker</strong>
             </NavLink>
             {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}

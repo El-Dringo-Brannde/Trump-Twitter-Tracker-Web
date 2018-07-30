@@ -29,7 +29,7 @@ class App extends Component {
                   <Route path='/wordcloud' component={WordCloudContainer} />
                   <Route path='/sunburst' component={SunBurstContainer} />
                   <Route path='/heatmap' component={HeatMapContainer} />
-                  <Route path='/all' component={AllContainer} />
+                  <Route path='/' component={AllContainer} />
                   <Route path='/mentions' component={MentionsContainer} />
                   <Route path='/hashtags' component={HashtagsContainer} />
                   <Route component={Lost} />
