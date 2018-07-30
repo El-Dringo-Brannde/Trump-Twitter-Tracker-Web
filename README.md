@@ -1,4 +1,4 @@
-## [Trump Twitter Tracker Web](https://trump-twitter-tracker-web.herokuapp.com/#/all)
+## [Trump Twitter Tracker Web](https://el-dringo-brannde.github.io/Trump-Twitter-Tracker-Web/#/)
 
 
 
@@ -8,6 +8,9 @@ A React Redux site to parse data from the server to provide some data visualizat
 
 Deployed via Github Pages [here](https://trump-twitter-tracker-web.herokuapp.com/#/all)
 
+
+### Todo
+- Update the site to pull data from Twitter by the day. 
 
 ### _Note_
 Used this project to learn Redux, as of now Redux is **Completely overkill** and adds a lot of tech debt to the project.  
