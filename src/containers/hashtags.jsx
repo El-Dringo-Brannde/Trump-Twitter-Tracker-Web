@@ -37,7 +37,7 @@ class HashtagsContainer extends React.Component {
             label: 'Stop',
             onChange: (moment, idx) => {
                this.datePickers[idx].value = moment._d
-               dispatch(fetchData(moment._d, this.datePickers[0].value, 1))
+               dispatch(fetchData(this.datePickers[0].value, moment._d, 1))
             },
             value: moment('2018-05-20')
          }
