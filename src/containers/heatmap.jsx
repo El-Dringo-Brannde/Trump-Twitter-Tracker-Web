@@ -21,15 +21,16 @@ class HeatMapContainer extends React.Component {
             label: 'Start',
             onChange: (moment, idx) => {
                this.datePickers[idx].value = moment._d
-               dispatch(fetchData(moment._d, this.datePickers[1].value, 1))
+               dispatch(fetchData(moment._d, this.datePickers[1].value))
             },
-            value: moment().subtract(1, 'years')
+            value: moment('2018-05-20').subtract(1, 'years')
          },
          {
             label: 'Stop',
             onChange: (moment, idx) => {
                this.datePickers[idx].value = moment._d
                dispatch(fetchData(moment._d, this.datePickers[0].value, 1))
+               dispatch(fetchData(this.datePickers[0].value, moment._d))
             },
             value: moment('2018-05-20')
          }
