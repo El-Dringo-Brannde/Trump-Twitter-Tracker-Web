@@ -6,45 +6,47 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
 const styles = {
-   root: {
-      flexGrow: 1,
-   },
+	root: {
+		flexGrow: 1
+	}
 };
-let tabVal = 0
 
 class CenteredTabs extends React.Component {
-   state = {
-      value: 0,
-   };
+	constructor(props) {
+		super(props)
+		this.state = {
+			value: 0
+		};
+	}
 
-   render() {
-      const { classes } = this.props;
+	render() {
+		const { classes } = this.props;
 
-      return (
-         <Paper className={classes.root}>
-            <Tabs
-               value={this.props.tabVal}
-               indicatorColor="primary"
-               textColor="primary"
-               centered
-            >
-               {this.props.tabs.map((tab, idx) => {
-                  return (
-                     <Tab
-                        key={idx}
-                        label={tab.label}
-                        onClick={tab.onClick}
-                     />
-                  )
-               })}
-            </Tabs>
-         </Paper>
-      );
-   }
+		return (
+			<Paper className={classes.root}>
+				<Tabs
+					value={this.props.tabVal}
+					indicatorColor="primary"
+					textColor="primary"
+					centered
+				>
+					{this.props.tabs.map((tab, idx) => {
+						return (
+							<Tab
+								key={idx}
+								label={tab.label}
+								onClick={tab.onClick}
+							/>
+						);
+					})}
+				</Tabs>
+			</Paper>
+		);
+	}
 }
 
 CenteredTabs.propTypes = {
-   classes: PropTypes.object.isRequired,
+	classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(CenteredTabs);

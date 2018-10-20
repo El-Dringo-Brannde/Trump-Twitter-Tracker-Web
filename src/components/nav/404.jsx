@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const Lost = props => {
-   return (
-      <img src={process.env.PUBLIC_URL + '/404.jpg'} style={{ width: '100%', height: '100%' }} />
-   )
-}
+const Lost = props => (
+  <img
+    src={`${process.env.PUBLIC_URL}/404.jpg`}
+    style={{ width: '100%', height: '100%' }}
+    alt=""
+  />
+);
 
-export default Lost
+export default Lost;
