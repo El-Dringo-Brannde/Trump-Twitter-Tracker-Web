@@ -7,13 +7,13 @@ import MentionsContainer from './mentions';
 import HashtagsContainer from './hashtags';
 
 const AllContainer = () => (
-  <div>
-    <WordCloudContainer />
-    <SunBurstContainer />
-    <HeatMapContainer />
-    <MentionsContainer />
-    <HashtagsContainer />
-  </div>
+	<div>
+		<WordCloudContainer />
+		<SunBurstContainer />
+		<HeatMapContainer />
+		<MentionsContainer />
+		<HashtagsContainer />
+	</div>
 );
 
 export default AllContainer;

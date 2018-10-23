@@ -1,12 +1,12 @@
 import React from 'react';
 import SkewedContainer from 'sc-react';
+import propTypes from 'prop-types';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
 import DatePickers from '../nav/datepicker';
 
 import columnGraphConfig from '../../config/graphs/columns';
-import propTypes from 'prop-types'
 
 export default class Columns extends React.Component {
 	componentDidUpdate() {
@@ -27,22 +27,14 @@ export default class Columns extends React.Component {
 				noMargin
 				style={{ padding: '75px 0px', width: '100%' }}
 			>
-				<DatePickers
-					datePickers={datePickers}
-				/>
-				{
-					isFetching
-						? (
-							<Grid
-								container
-								alignItems="center"
-								justify="center"
-							>
-								<CircularProgress size={150} />
-							</Grid>
-						)
-						: <div id={columnConfig.containerID} />
-				}
+				<DatePickers datePickers={datePickers} />
+				{isFetching ? (
+					<Grid container alignItems="center" justify="center">
+						<CircularProgress size={150} />
+					</Grid>
+				) : (
+					<div id={columnConfig.containerID} />
+				)}
 			</SkewedContainer>
 		);
 	}
@@ -53,4 +45,4 @@ Columns.propTypes = {
 	datePickers: propTypes.array.isRequired,
 	isFetching: propTypes.bool.isRequired,
 	data: propTypes.object.isRequired
-}
+};

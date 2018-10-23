@@ -44,5 +44,5 @@ export const fetchData = (start, stop) => async (dispatch) => {
 			`${URL}/graphs/hashtags?start=${start.toISOString()}&stop=${stop.toISOString()}`,
 		);
 		setTimeout(() => dispatch(receiveData(data)), 1000);
-	} catch (err) { console.log(err) }
+	} catch (err) { console.log(err); }
 };
