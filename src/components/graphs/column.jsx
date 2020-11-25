@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import SkewedContainer from 'sc-react';
 import propTypes from 'prop-types';
 
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Grid from '@material-ui/core/Grid';
+import { CircularProgress, Grid } from '@material-ui/core';
 import DatePickers from '../nav/datepicker';
 
 import columnGraphConfig from '../../config/graphs/columns';
 
-export default class Columns extends React.Component {
+export default class Columns extends Component {
 	componentDidUpdate() {
 		const { data, isFetching, columnConfig } = this.props;
 		const { length } = data;

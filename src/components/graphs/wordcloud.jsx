@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import SkewedContainer from 'sc-react';
 import propTypes from 'prop-types';
 
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Grid from '@material-ui/core/Grid';
+import { CircularProgress, Grid } from '@material-ui/core';
 
 import wordCloudConfig from '../../config/graphs/wordcloud';
 import CenteredTabs from '../nav/tabs';
 
-export default class WordCloud extends React.Component {
+export default class WordCloud extends Component {
 	componentDidUpdate() {
 		const { data, isFetching } = this.props;
 		const { length } = data;

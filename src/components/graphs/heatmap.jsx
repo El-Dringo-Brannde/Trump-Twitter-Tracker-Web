@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import propTypes, { number } from 'prop-types';
 import SkewedContainer from 'sc-react';
 
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Grid from '@material-ui/core/Grid';
+import { CircularProgress, Grid } from '@material-ui/core';
 import DatePickers from '../nav/datepicker';
 
 import heatMapConfig from '../../config/graphs/heatmap';
 
-export default class HeatMap extends React.Component {
+export default class HeatMap extends Component {
 	componentDidUpdate() {
 		const { data, isFetching } = this.props;
 		const { length } = data;
