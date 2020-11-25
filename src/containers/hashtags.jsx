@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import * as momentLib from 'moment';
@@ -13,7 +13,7 @@ const hashtagConfig = {
 	title: "Trump's Most Popular Hashtags"
 };
 
-class HashtagsContainer extends React.Component {
+class HashtagsContainer extends Component {
 	constructor(props) {
 		super(props);
 		const { dispatch } = this.props;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
@@ -7,7 +7,7 @@ import { fetchData } from '../redux/sunburst/actions';
 
 import SunBurst from '../components/graphs/sunburst';
 
-class SunBurstContainer extends React.Component {
+class SunBurstContainer extends Component {
 	constructor(props) {
 		super(props);
 		const { dispatch } = this.props;
@@ -41,11 +41,7 @@ class SunBurstContainer extends React.Component {
 	}
 
 	render() {
-		return (
-			<div>
-				<SunBurst {...this.props} datePickers={this.datePickers} />
-			</div>
-		);
+		return <SunBurst {...this.props} datePickers={this.datePickers} />;
 	}
 }
 

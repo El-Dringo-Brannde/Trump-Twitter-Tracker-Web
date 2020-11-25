@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
@@ -6,7 +6,7 @@ import { fetchData } from '../redux/wordcloud/actions';
 
 import WordCloud from '../components/graphs/wordcloud';
 
-class WordCloudContainer extends React.Component {
+class WordCloudContainer extends Component {
 	constructor(props) {
 		super(props);
 
@@ -20,14 +20,14 @@ class WordCloudContainer extends React.Component {
 				}
 			},
 			{
-				label: '2 Word',
+				label: '2 Words',
 				onClick: () => {
 					dispatch(fetchData(2));
 					this.tabVal = 1;
 				}
 			},
 			{
-				label: '3 Word',
+				label: '3 Words',
 				onClick: () => {
 					dispatch(fetchData(3));
 					this.tabVal = 2;

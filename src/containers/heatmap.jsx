@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
@@ -7,7 +7,7 @@ import { fetchData } from '../redux/heatmap/actions';
 
 import HeatMap from '../components/graphs/heatmap';
 
-class HeatMapContainer extends React.Component {
+class HeatMapContainer extends Component {
 	constructor(props) {
 		super(props);
 		const { dispatch } = this.props;

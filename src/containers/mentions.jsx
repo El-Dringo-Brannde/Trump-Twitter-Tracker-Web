@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
@@ -14,7 +14,7 @@ const mentionConfig = {
 	title: "Trump's Most Popular Tweet Mentions"
 };
 
-class MentionsContainer extends React.Component {
+class MentionsContainer extends Component {
 	constructor(props) {
 		super(props);
 		const { dispatch } = this.props;
@@ -49,13 +49,11 @@ class MentionsContainer extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<Columns
-					{...this.props}
-					datePickers={this.datePickers}
-					columnConfig={mentionConfig}
-				/>
-			</div>
+			<Columns
+				{...this.props}
+				datePickers={this.datePickers}
+				columnConfig={mentionConfig}
+			/>
 		);
 	}
 }
