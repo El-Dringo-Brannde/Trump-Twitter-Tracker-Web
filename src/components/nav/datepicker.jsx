@@ -1,9 +1,10 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import { DatePicker } from 'material-ui-pickers';
+import {
+  DatePicker
+} from '@material-ui/pickers';
 
-import { Paper } from '@material-ui/core';
-import Grid from '@material-ui/core/Grid';
+import { Paper, Grid } from '@material-ui/core';
 
 const DatePickers = props => {
 	const { datePickers } = props;

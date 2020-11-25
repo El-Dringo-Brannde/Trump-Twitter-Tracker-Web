@@ -1,14 +1,7 @@
-import React from 'react';
-import {
-	Navbar,
-	NavbarNav,
-	NavbarToggler,
-	Collapse,
-	NavItem,
-	NavLink
-} from 'mdbreact';
+import React, {Component} from 'react';
+import { AppBar, Toolbar, Typography, Button } from '@material-ui/core';
 
-export default class NavBar extends React.Component {
+export default class NavBar extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -35,39 +28,14 @@ export default class NavBar extends React.Component {
 	render() {
 		const { isWideEnough, collapse } = this.state;
 		return (
-			<Navbar
-				light
-				color="blue-grey lighten-5"
-				expand="lg"
-				fixed="top"
-				style={{ marginBottom: 250 }}
-			>
-				<NavLink to="/">
-					<strong>Trump Twitter Tracker</strong>
-				</NavLink>
-				{!isWideEnough && <NavbarToggler onClick={this.onClick} />}
-				<Collapse isOpen={collapse} navbar>
-					<NavbarNav right>
-						<NavItem color="blue-grey lighten-5">
-							<NavLink to="/sunburst" className="nav-link">
-								Word Types
-							</NavLink>
-						</NavItem>
-						<NavItem>
-							<NavLink to="/wordcloud">Frequent Words</NavLink>
-						</NavItem>
-						<NavItem>
-							<NavLink to="/heatmap">Tweet Times</NavLink>
-						</NavItem>
-						<NavItem>
-							<NavLink to="/mentions">Mentions</NavLink>
-						</NavItem>
-						<NavItem>
-							<NavLink to="/hashtags">Hashtags</NavLink>
-						</NavItem>
-					</NavbarNav>
-				</Collapse>
-			</Navbar>
+			<>
+            <AppBar position="static">
+               <Toolbar>
+                  <Typography variant="h6">News</Typography>
+                  <Button color="inherit">Login</Button>
+               </Toolbar>
+            </AppBar>
+			</>
 		);
 	}
 }
